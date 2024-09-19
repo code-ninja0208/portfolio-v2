@@ -17,7 +17,7 @@ const About = () => {
     {
       label: (
         <TabLabel>
-          <AboutIcon size={17} /> Intro
+          <AboutIcon size={17} /> Bio
         </TabLabel>
       ),
       children: <Story />,
@@ -33,18 +33,18 @@ const About = () => {
     {
       label: (
         <TabLabel>
-          <CareerIcon size={17} /> Career
-        </TabLabel>
-      ),
-      children: <CareerList />,
-    },
-    {
-      label: (
-        <TabLabel>
           <EducationIcon size={17} /> Education
         </TabLabel>
       ),
       children: <EducationList />,
+    },
+    {
+      label: (
+        <TabLabel>
+          <CareerIcon size={17} /> Work History
+        </TabLabel>
+      ),
+      children: <CareerList />,
     },
   ];
   return <Tabs tabs={TABS} />;

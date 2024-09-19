@@ -2,9 +2,9 @@ import { BiRocket as ContactIcon } from 'react-icons/bi';
 import {
   BsEnvelopeAtFill as EmailIcon,
   BsGithub as GithubIcon,
-  BsInstagram as InstagramIcon,
+  BsTelegram  as TelegramIcon,
   BsLinkedin as LinkedinIcon,
-  BsTwitter as TwitterIcon,
+  BsDiscord  as DiscordIcon,
 } from 'react-icons/bs';
 import {
   FiBookOpen as LearnIcon,
@@ -112,7 +112,7 @@ export const MENU_APPS: MenuItemProps[] = [
 export const SOCIAL_MEDIA: MenuItemProps[] = [
   {
     title: 'Email',
-    href: 'mailto:aulianza.dev@gmail.com',
+    href: 'mailto:paishaiming995@gmail.com',
     icon: <EmailIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
@@ -123,7 +123,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
 
   {
     title: 'Linkedin',
-    href: 'https://www.linkedin.com/in/aulianza/',
+    href: 'https://www.linkedin.com/in/',
     icon: <LinkedinIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
@@ -132,28 +132,28 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
     type: 'Link',
   },
   {
-    title: 'Twitter',
-    href: 'https://twitter.com/aulianzaa',
-    icon: <TwitterIcon size={iconSize} />,
+    title: 'Telegram',
+    href: 'http://t.me/CrazyTechLearner0208',
+    icon: <TelegramIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
-    eventName: 'Social: Twitter',
+    eventName: 'Social: Telegram',
     className: '!bg-sky-500 border border dark:border-neutral-700',
     type: 'Link',
   },
   {
-    title: 'Instagram',
-    href: 'https://instagram.com/aulianza',
-    icon: <InstagramIcon size={iconSize} />,
+    title: 'Discord',
+    href: 'https://discordapp.com/users/jerry_dev325_93534',
+    icon: <DiscordIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
-    eventName: 'Social: Instagram',
+    eventName: 'Social: Discord',
     className: '!bg-orange-700 border border dark:border-neutral-700',
     type: 'Link',
   },
   {
     title: 'Github',
-    href: 'https://github.com/aulianza',
+    href: 'https://github.com/code-ninja0208',
     icon: <GithubIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
