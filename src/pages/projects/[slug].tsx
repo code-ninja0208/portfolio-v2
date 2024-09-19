@@ -21,7 +21,7 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
   return (
     <>
       <NextSeo
-        title={`${project?.title} - Project Ryan Aulia`}
+        title={`${project?.title} - Project Shaiming Pai`}
         description={project?.description}
         canonical={canonicalUrl}
         openGraph={{
@@ -29,7 +29,7 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
           article: {
             publishedTime: project?.updated_at.toString(),
             modifiedTime: project?.updated_at.toString(),
-            authors: ['Ryan Aulia'],
+            authors: ['Shaiming Pai'],
           },
           url: canonicalUrl,
           images: [
@@ -37,7 +37,7 @@ const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
               url: project?.image,
             },
           ],
-          siteName: 'Blog Ryan Aulia',
+          siteName: 'Blog Shaiming Pai',
         }}
       />
       <Container data-aos='fade-up'>
