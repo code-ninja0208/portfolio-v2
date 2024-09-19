@@ -68,7 +68,7 @@ const ContactForm = () => {
           <input
             className='w-full rounded-md border border-neutral-200 px-3 py-2 focus:outline-none dark:border-neutral-700'
             type='text'
-            placeholder='Name*'
+            placeholder='Input Your Full Name*'
             name='name'
             value={formData.name}
             onChange={handleChange}
@@ -77,7 +77,7 @@ const ContactForm = () => {
           <input
             className='w-full rounded-md border border-neutral-200 px-3 py-2 focus:outline-none dark:border-neutral-700'
             type='email'
-            placeholder='Email*'
+            placeholder='Input Your Email*'
             name='email'
             value={formData.email}
             onChange={handleChange}
@@ -87,7 +87,7 @@ const ContactForm = () => {
         <textarea
           className='w-full rounded-md border border-neutral-200 px-3 py-2 focus:outline-none dark:border-neutral-700'
           rows={5}
-          placeholder='Message*'
+          placeholder='Describe Your Message*'
           name='message'
           value={formData.message}
           onChange={handleChange}
@@ -109,8 +109,8 @@ const ContactForm = () => {
       <div className='my-5 flex items-center gap-2 dark:text-neutral-400'>
         <ClockIcon />
         <div className='text-sm'>
-          <span className='font-medium'>Avg. response:</span> 1-2 Hours (Working
-          Hours, GMT+7)
+          <span className='font-medium'>Avg. response:</span> 30 Minutes (Working
+          Hours, GMT+4)
         </div>
       </div>
     </form>

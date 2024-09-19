@@ -7,7 +7,7 @@ import { LEARN_CONTENTS } from '@/common/constant/learn';
 import LearnModule from '@/modules/learn';
 
 const PAGE_TITLE = 'Learn';
-const PAGE_DESCRIPTION = `It's not a course, it's my personal learning notes. But if you are interested, let's learn together.`;
+const PAGE_DESCRIPTION = `Nowdays I am studying about Rust. This is not course. But if you are interested, let's learn together.`;
 
 const LearnPage: NextPage = () => {
   const filteredContents =
