@@ -9,9 +9,9 @@ const Services = () => {
   return (
     <section className='space-y-5'>
       <div className='space-y-3'>
-        <SectionHeading title="What I've been working on" />
+        <SectionHeading title="Services" />
         <p className='leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
-          I assist brands, companies, institutions, and startups in creating
+          I help individuals, companys, institutions, and startups in creating
           exceptional digital experiences for their businesses through strategic
           development services.
         </p>

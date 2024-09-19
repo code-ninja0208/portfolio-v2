@@ -1,6 +1,8 @@
 import { BsFillBootstrapFill, BsRobot } from 'react-icons/bs';
 import {
   SiAngular,
+  SiPython, 
+  SiCplusplus,
   SiApollographql,
   SiCss3,
   SiExpress,
@@ -13,16 +15,14 @@ import {
   SiLaravel,
   SiMui,
   SiNextdotjs,
-  SiNginx,
   SiNodedotjs,
-  SiNuxtdotjs,
   SiPhp,
   SiPrisma,
   SiPwa,
   SiReact,
   SiRedux,
   SiSocketdotio,
-  SiStorybook,
+  SiDjango,
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
@@ -30,6 +30,9 @@ import {
   SiVuedotjs,
   SiWebpack,
   SiWordpress,
+  SiGit,
+  SiGithub,
+  SiDotnet
 } from 'react-icons/si';
 
 export type stacksProps = {
@@ -39,42 +42,49 @@ export type stacksProps = {
 const iconSize = 20;
 
 export const STACKS: stacksProps = {
-  PHP: <SiPhp size={iconSize} className='text-blue-500' />,
+  // Languages
   JavaScript: <SiJavascript size={iconSize} className='text-yellow-400' />,
   TypeScript: <SiTypescript size={iconSize} className='text-blue-400' />,
-  'Next.js': <SiNextdotjs size={iconSize} />,
+  PHP: <SiPhp size={iconSize} className='text-blue-500' />,
+  Python: <SiPython size={iconSize} className='text-blue-300' />,
+  CPlusPlus: <SiCplusplus size={iconSize} className='text-blue-600' />,
+
+  // Frontend
   'React.js': <SiReact size={iconSize} className='text-sky-500' />,
-  TailwindCSS: <SiTailwindcss size={iconSize} className='text-cyan-300' />,
+  'Next.js': <SiNextdotjs size={iconSize} />,
+  'Vue.js': <SiVuedotjs size={iconSize} className='text-green-500' />,
+  Angular: <SiAngular size={iconSize} className='text-red-500' />,
+  'Material UI': <SiMui size={iconSize} className='text-sky-400' />,
+  CSS: <SiCss3 size={iconSize} className='text-blue-300' />,
   Bootstrap: (
     <BsFillBootstrapFill size={iconSize} className='text-purple-500' />
   ),
-  GraphQL: <SiGraphql size={iconSize} className='text-pink-600' />,
-  Apollo: <SiApollographql size={iconSize} />,
-  WordPress: <SiWordpress size={iconSize} />,
-  Laravel: <SiLaravel size={iconSize} className='text-red-500' />,
-  'Material UI': <SiMui size={iconSize} className='text-sky-400' />,
-  Vite: <SiVite size={iconSize} className='text-purple-500' />,
-  Prisma: <SiPrisma size={iconSize} className='text-emerald-500' />,
-  Firebase: <SiFirebase size={iconSize} className='text-yellow-500' />,
-  'Artificial Intelligence': (
-    <BsRobot size={iconSize} className='text-rose-500' />
-  ),
-  Angular: <SiAngular size={iconSize} className='text-red-500' />,
-  'Vue.js': <SiVuedotjs size={iconSize} className='text-green-500' />,
-  'Nuxt.js': <SiNuxtdotjs size={iconSize} className='text-green-400' />,
-  'Node.js': <SiNodedotjs size={iconSize} className='text-green-600' />,
-  Gatsby: <SiGatsby size={iconSize} className='text-purple-600' />,
-  Redux: <SiRedux size={iconSize} className='text-purple-500' />,
-  Webpack: <SiWebpack size={iconSize} className='text-blue-500' />,
+  TailwindCSS: <SiTailwindcss size={iconSize} className='text-cyan-300' />,
   'Styled Components': (
     <SiStyledcomponents size={iconSize} className='text-pink-500' />
   ),
-  PWA: <SiPwa size={iconSize} className='text-amber-600' />,
-  Nginx: <SiNginx size={iconSize} className='text-green-500' />,
-  Jest: <SiJest size={iconSize} className='text-red-600' />,
-  Storybook: <SiStorybook size={iconSize} className='text-amber-500' />,
-  CSS: <SiCss3 size={iconSize} className='text-blue-300' />,
-  Socket: <SiSocketdotio size={iconSize} />,
-  Express: <SiExpress size={iconSize} />,
+
+  // Backend
   Jquery: <SiJquery size={iconSize} />,
+  'Node.js': <SiNodedotjs size={iconSize} className='text-green-600' />,
+  Express: <SiExpress size={iconSize} />,
+  Django: <SiDjango size={iconSize} className='text-green-600' />,
+  WordPress: <SiWordpress size={iconSize} />,
+  Laravel: <SiLaravel size={iconSize} className='text-red-500' />,
+  DotNet: <SiDotnet size={iconSize} className='text-blue-600' />,
+
+  // Accessary
+  Git: <SiGit size={iconSize} className='text-orange-500' />,
+  GitHub: <SiGithub size={iconSize} className='text-black' />,
+  Webpack: <SiWebpack size={iconSize} className='text-blue-500' />,
+  Vite: <SiVite size={iconSize} className='text-purple-500' />,
+  Gatsby: <SiGatsby size={iconSize} className='text-purple-600' />,
+  GraphQL: <SiGraphql size={iconSize} className='text-pink-600' />,
+  Socket: <SiSocketdotio size={iconSize} />,
+  PWA: <SiPwa size={iconSize} className='text-amber-600' />,
+  Redux: <SiRedux size={iconSize} className='text-purple-500' />,
+  Firebase: <SiFirebase size={iconSize} className='text-yellow-500' />,
+  Apollo: <SiApollographql size={iconSize} />,
+  Prisma: <SiPrisma size={iconSize} className='text-emerald-500' />,
+  Jest: <SiJest size={iconSize} className='text-red-600' />,
 };

@@ -7,12 +7,12 @@ import About from '@/modules/about';
 
 const PAGE_TITLE = 'About';
 const PAGE_DESCRIPTION =
-  'An insightful glimpse into who I am – because every detail adds depth to the canvas of life.';
+  'Let me introduce myself.';
 
 const AboutPage: NextPage = () => {
   return (
     <>
-      <NextSeo title={`${PAGE_TITLE} - Ryan Aulia`} />
+      <NextSeo title={`${PAGE_TITLE} - Shaiming Pai`} />
       <Container data-aos='fade-up'>
         <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
         <About />
