@@ -110,7 +110,7 @@ const ContactForm = () => {
         <ClockIcon />
         <div className='text-sm'>
           <span className='font-medium'>Avg. response:</span> 30 Minutes (Working
-          Hours, GMT+4)
+          Hours, GMT+3)
         </div>
       </div>
     </form>

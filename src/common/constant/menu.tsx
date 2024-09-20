@@ -78,6 +78,15 @@ export const MENU_ITEMS: MenuItemProps[] = [
     type: 'Pages',
   },
   {
+    title: 'Blog',
+    href: '/blog',
+    icon: <BlogIcon size={iconSize} />,
+    isShow: true,
+    isExternal: false,
+    eventName: 'Pages: Blog',
+    type: 'Pages',
+  },
+  {
     title: 'Guestbook',
     href: '/guestbook',
     icon: <ChatIcon size={iconSize} />,
@@ -114,7 +123,7 @@ export const SOCIAL_MEDIA: MenuItemProps[] = [
 
   {
     title: 'Linkedin',
-    href: 'https://www.linkedin.com/in/',
+    href: 'https://www.linkedin.com/in/volodymyr-ma-5aa969287/',
     icon: <LinkedinIcon size={iconSize} />,
     isShow: true,
     isExternal: true,

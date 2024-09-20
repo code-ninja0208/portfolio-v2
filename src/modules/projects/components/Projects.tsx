@@ -44,3 +44,4 @@ const Projects = ({ projects, loadMore, hasMore }: ProjectsComponentProps) => {
 };
 
 export default Projects;
+
