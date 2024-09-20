@@ -4,12 +4,12 @@ const metaDescription =
   'Seasoned Software Engineer especially in Frontend side, with a passion for creating pixel-perfect web experiences';
 
 const defaultSEOConfig = {
-  defaultTitle: 'Shaiming Pai - Personal Website',
+  defaultTitle: 'VOLODYMYR MALIUCHENKO - Personal Website',
   description: metaDescription,
   canonical: canonicalUrl,
   openGraph: {
     canonical: canonicalUrl,
-    title: 'Shaiming Pai - Personal Website',
+    title: 'VOLODYMYR MALIUCHENKO - Personal Website',
     description: metaDescription,
     type: 'website',
     images: [

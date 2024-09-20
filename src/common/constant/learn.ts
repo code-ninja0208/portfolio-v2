@@ -3,10 +3,10 @@ import { ContentProps } from '../types/learn';
 export const LEARN_CONTENTS: ContentProps[] = [
   {
     id: 1,
-    title: 'Rust Fundamentals',
-    slug: 'rust-fundamentals',
+    title: 'JS Fundamentals',
+    slug: 'js-fundamental',
     description: 'Master the fundamentals of programming in Rust.',
-    image: 'https://example.com/images/learn/rust-fundamentals.webp',
+    image: 'https://example.com/images/learn/js-fundamental.webp',
     is_new: false,
     level: 'Beginner',
     is_show: true,

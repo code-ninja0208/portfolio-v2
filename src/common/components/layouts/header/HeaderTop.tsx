@@ -43,7 +43,7 @@ const HeaderTop = () => {
             <div className='flex items-center gap-3'>
               <Link href='/' passHref>
                 <h2 className='flex-grow  text-lg font-medium lg:text-xl'>
-                   Shaiming Pai
+                   VOLODYMYR MALIUCHENKO
                 </h2>
               </Link>
               <Tooltip title='Verified'>

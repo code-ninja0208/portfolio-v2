@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import { firebase } from '@/common/libs/firebase';
+import { database } from '@/common/libs/firebase';
 import { MessageProps } from '@/common/types/chat';
 
 import ChatAuth from './ChatAuth';
@@ -16,7 +16,7 @@ const Chat = ({ isWidget = false }: { isWidget?: boolean }) => {
 
   const [messages, setMessages] = useState<MessageProps[]>([]);
 
-  const database = getDatabase(firebase);
+  // const database = getDatabase(firebase);
   const databaseChat = process.env.NEXT_PUBLIC_FIREBASE_CHAT_DB as string;
 
   const handleSendMessage = (message: string) => {

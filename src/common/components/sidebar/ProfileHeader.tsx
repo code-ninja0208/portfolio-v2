@@ -20,7 +20,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
     >
       <Image
         src='/images/kingkong0208.png'
-        alt='Shaiming Pai'
+        alt='VOLODYMYR MALIUCHENKO'
         width={expandMenu ? 80 : imageSize}
         height={expandMenu ? 80 : imageSize}
         rounded='rounded-full'
@@ -30,7 +30,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => {
         <div className='mt-1 flex items-center gap-2 lg:mt-4'>
           <Link href='/' passHref>
             <h2 className='flex-grow  text-lg font-medium lg:text-xl'>
-              Shaiming Pai
+              VOLODYMYR MALIUCHENKO
             </h2>
           </Link>
           <VerifiedIcon size={18} className='text-blue-400' />
