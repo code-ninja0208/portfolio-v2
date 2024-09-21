@@ -4,7 +4,7 @@ import { LuDownload as DownloadIcon } from 'react-icons/lu';
 import GoogleDocsEmbed from '@/common/components/elements/GoogleDocsEmbed';
 
 const Resume = () => {
-  const RESUME_URL = 'https://drive.google.com/file/d/15qrvMJFuaiNHXhyZvaWqFWD0ypNEFRJc/view?usp=sharing';
+  const RESUME_URL = 'https://drive.google.com/file/d/1SS8qTecIAYXZfl3wIW1vxftBd_Geaspo/view?usp=sharing';
 
   return (
     <div className='space-y-5'>
