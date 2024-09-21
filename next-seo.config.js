@@ -1,7 +1,7 @@
-const canonicalUrl = 'https://aulianza.id';
-const metaImage = 'https://cloud.aulianza.com/public/images/aulianza-id.png';
+const canonicalUrl = 'https://portfolio-v2-3csx.onrender.com/';
+const metaImage = 'https://i.ibb.co/DCy5BL0/thumbnail-7ec1e453-66b0-44c2-b188-e91b588ad25f.jpg';
 const metaDescription =
-  'Seasoned Software Engineer especially in Frontend side, with a passion for creating pixel-perfect web experiences';
+  'Senior Full stack web3 Engineer';
 
 const defaultSEOConfig = {
   defaultTitle: 'VOLODYMYR MALIUCHENKO - Personal Website',

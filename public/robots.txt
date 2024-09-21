@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://aulianza.id
+Host: https://portfolio-v2-3csx.onrender.com/
 
 # Sitemaps
-Sitemap: https://aulianza.id/sitemap.xml
+Sitemap: https://portfolio-v2-3csx.onrender.com/sitemap.xml
