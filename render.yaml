@@ -10,8 +10,7 @@ services:
     runtime: node
     plan: free
     branch: main
-    buildCommand: yarn install --no-frozen-lockfile && yarn build
-    preDeployCommand: yarn prisma migrate deploy
+    buildCommand: yarn install --no-frozen-lockfile && yarn build && yarn prisma migrate deploy
     startCommand: yarn start
     healthCheckPath: /
     autoDeployTrigger: commit
