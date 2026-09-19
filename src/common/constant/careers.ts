@@ -6,7 +6,7 @@ export const CAREERS: CareerProps[] = [
     company: 'CASERS',
     company_legal_name: 'CASERS',
     logo: '/images/careers/casers.png',
-    location: "Ukraine 🇺🇦",
+    location: 'Ukraine 🇺🇦',
     location_type: 'Remote',
     type: 'Part-time',
     start_date: '2017-10',
@@ -57,8 +57,8 @@ export const CAREERS: CareerProps[] = [
     responsibilities: [
       "Developed Lazy Cubs' frontend with Next.js, TypeScript, Ether.js, useDapp",
       'Engineered Node.js/GraphQL backend, enhancing web3 integration & response speed.',
-      "Optimized smart contract interaction, cutting response time by 0.5s via Subgraph",
-      "Conducted rigorous smart contract testing on Rinkeby Testnet for robust deployment .",
+      'Optimized smart contract interaction, cutting response time by 0.5s via Subgraph',
+      'Conducted rigorous smart contract testing on Rinkeby Testnet for robust deployment .',
     ],
   },
   {
@@ -76,7 +76,7 @@ export const CAREERS: CareerProps[] = [
     responsibilities: [
       'Engaged actively with the developer community to stay at the forefront of industry trends and best practices about AI, ML.',
       'Successfully completed high-value projects of one U.S. client in Upwork, generating earnings of $7,000 through exceptional technical skills and client satisfaction.',
-      "Currently expanding technical proficiency by studying Rust and Go, aiming to enhance capabilities in blockchain development.",
+      'Currently expanding technical proficiency by studying Rust and Go, aiming to enhance capabilities in blockchain development.',
     ],
   },
 ];

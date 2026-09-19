@@ -129,7 +129,9 @@ const CommandPalette = () => {
 
   const handleFindGoogle = () => {
     const url =
-      'https://www.google.com/search?q=' + queryDebounce + '&ref=code-ninja0208';
+      'https://www.google.com/search?q=' +
+      queryDebounce +
+      '&ref=code-ninja0208';
     window.open(url, '_blank');
   };
 

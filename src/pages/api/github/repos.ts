@@ -2,7 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 const USERNAME = 'code-ninja0208';
 
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  _req: NextApiRequest,
+  res: NextApiResponse,
+) {
   try {
     const response = await fetch(
       `https://api.github.com/users/${USERNAME}/repos?sort=updated&direction=desc&per_page=12&type=owner`,
@@ -25,7 +28,10 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
         updated_at: repo.updated_at,
       }));
 
-    res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=3600');
+    res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=900, stale-while-revalidate=3600',
+    );
     return res.status(200).json({ repos: data });
   } catch {
     return res.status(500).json({ repos: [] });

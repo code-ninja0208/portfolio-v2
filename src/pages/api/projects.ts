@@ -14,9 +14,9 @@ export default async function handler(
   res: NextApiResponse<Data>,
 ) {
   try {
-      const response = await prisma.projects.findMany();
-      res.status(200).json({ status: true, data: response });
-    } catch (error) {
-        res.status(200).json({ status: false, error: error });
-    }
+    const response = await prisma.projects.findMany();
+    res.status(200).json({ status: true, data: response });
+  } catch (error) {
+    res.status(200).json({ status: false, error: error });
+  }
 }

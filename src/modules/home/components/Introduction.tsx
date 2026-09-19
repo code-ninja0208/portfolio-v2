@@ -15,10 +15,11 @@ const Introduction = () => {
       </div>
 
       <p className='mt-6 leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
-        I build reliable data platforms, AI-powered applications and scalable software systems. My work spans
-        data engineering, ETL / ELT pipelines, backend APIs, analytics, full-stack products and Web3 integrations.
-        I enjoy turning raw data into dependable systems and useful products with Python, SQL, modern web
-        technologies and cloud-native tooling.
+        I build reliable data platforms, AI-powered applications and scalable
+        software systems. My work spans data engineering, ETL / ELT pipelines,
+        backend APIs, analytics, full-stack products and Web3 integrations. I
+        enjoy turning raw data into dependable systems and useful products with
+        Python, SQL, modern web technologies and cloud-native tooling.
       </p>
     </section>
   );
