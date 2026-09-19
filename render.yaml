@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: code-ninja0208-portfolio
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: yarn install --no-frozen-lockfile && yarn build
+    startCommand: yarn start
+    healthCheckPath: /
+    autoDeployTrigger: commit
