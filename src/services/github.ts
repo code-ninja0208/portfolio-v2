@@ -32,29 +32,31 @@ export const fetchGithubData = async (
   username: string,
   token: string | undefined,
 ) => {
-  const response = await axios.post(
-    GITHUB_USER_ENDPOINT,
-    {
-      query: GITHUB_USER_QUERY,
-      variables: {
-        username: username,
+  try {
+    const response = await axios.post(
+      GITHUB_USER_ENDPOINT,
+      {
+        query: GITHUB_USER_QUERY,
+        variables: { username },
       },
-    },
-    {
-      headers: {
-        Authorization: `bearer ${token}`,
+      {
+        headers: {
+          Accept: 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
       },
-    },
-  );
+    );
 
-  const status: number = response.status;
-  const responseJson = response.data;
+    const responseJson = response.data;
 
-  if (status > 400) {
-    return { status, data: {} };
+    if (responseJson?.errors?.length || !responseJson?.data?.user) {
+      return { status: response.status, data: {} };
+    }
+
+    return { status: response.status, data: responseJson.data.user };
+  } catch {
+    return { status: 200, data: {} };
   }
-
-  return { status, data: responseJson.data.user };
 };
 
 export const getGithubUser = async (type: string) => {
@@ -63,9 +65,9 @@ export const getGithubUser = async (type: string) => {
   );
 
   if (!account) {
-    throw new Error('Invalid user type');
+    return { status: 200, data: {} };
   }
 
   const { username, token } = account;
-  return await fetchGithubData(username, token);
+  return fetchGithubData(username, token);
 };
