@@ -1,28 +1,23 @@
-import { Fira_Code, Onest, Plus_Jakarta_Sans, Sora } from 'next/font/google';
+// Keep production builds independent of external font downloads.
+// Render (and other restricted build environments) may not be able to reach Google Fonts.
+// These system-safe stacks preserve the intended typography without a network dependency.
 
-export const jakartaSans = Plus_Jakarta_Sans({
-  variable: '--jakartaSans-font',
-  subsets: ['latin'],
-  display: 'fallback',
-  weight: ['400', '500', '600', '700', '800'],
+const font = (fontFamily: string) => ({
+  style: { fontFamily },
 });
 
-export const firaCode = Fira_Code({
-  variable: '--font-fira-code',
-  subsets: ['latin'],
-  display: 'swap',
-});
+export const jakartaSans = font(
+  '"Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+);
 
-export const soraSans = Sora({
-  variable: '--soraSans-font',
-  subsets: ['latin'],
-  display: 'fallback',
-  weight: ['300', '400', '500', '600', '700', '800'],
-});
+export const firaCode = font(
+  '"Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+);
 
-export const onestSans = Onest({
-  variable: '--onestSans-font',
-  subsets: ['latin'],
-  display: 'fallback',
-  weight: ['300', '400', '500', '600', '700', '800'],
-});
+export const soraSans = font(
+  'Sora, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+);
+
+export const onestSans = font(
+  'Onest, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+);
