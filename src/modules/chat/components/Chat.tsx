@@ -4,7 +4,7 @@ import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-import { database } from '@/common/libs/firebase';
+import { getFirebaseDatabase } from '@/common/libs/firebase';
 import { MessageProps } from '@/common/types/chat';
 
 import ChatAuth from './ChatAuth';
@@ -21,6 +21,7 @@ const Chat = ({ isWidget = false }: { isWidget?: boolean }) => {
 
   const handleSendMessage = (message: string) => {
     const messageId = uuidv4();
+    const database = getFirebaseDatabase();
     const messageRef = ref(database, `${databaseChat}/${messageId}`);
 
     set(messageRef, {
@@ -35,6 +36,7 @@ const Chat = ({ isWidget = false }: { isWidget?: boolean }) => {
   };
 
   const handleDeleteMessage = (id: string) => {
+    const database = getFirebaseDatabase();
     const messageRef = ref(database, `${databaseChat}/${id}`);
 
     if (messageRef) {
@@ -43,6 +45,7 @@ const Chat = ({ isWidget = false }: { isWidget?: boolean }) => {
   };
 
   useEffect(() => {
+    const database = getFirebaseDatabase();
     const messagesRef = ref(database, databaseChat);
     onValue(messagesRef, (snapshot) => {
       const messagesData = snapshot.val();
@@ -56,7 +59,7 @@ const Chat = ({ isWidget = false }: { isWidget?: boolean }) => {
         setMessages(sortedMessage);
       }
     });
-  }, [database]);
+  }, []);
 
   return (
     <>
