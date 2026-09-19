@@ -1,5 +1,5 @@
-import useSWR from 'swr';
 import SectionHeading from '@/common/components/elements/SectionHeading';
+import useSWR from 'swr';
 
 interface GithubRepo {
   name: string;
