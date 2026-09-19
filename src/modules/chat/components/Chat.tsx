@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { getDatabase, onValue, ref, remove, set } from 'firebase/database';
+import { onValue, ref, remove, set } from 'firebase/database';
 import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
