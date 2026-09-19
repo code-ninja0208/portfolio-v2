@@ -10,7 +10,7 @@ const PAGE_TITLE = 'JavaScript Playground';
 const playground: NextPage = () => {
   return (
     <>
-      <NextSeo title={`${PAGE_TITLE} - VOLODYMYR MALIUCHENKO`} />
+      <NextSeo title={`${PAGE_TITLE} - code-ninja0208`} />
       <Container className='!mt-0 pt-20 md:pt-0' data-aos='fade-up'>
         <Playground id='playground' isHeading />
       </Container>

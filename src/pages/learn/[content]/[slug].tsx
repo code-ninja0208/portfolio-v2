@@ -27,21 +27,21 @@ const LearnContentDetailPage: NextPage<{ data: MdxFileContentProps }> = ({
   return (
     <>
       <NextSeo
-        title={`Learn ${meta?.category} : ${PAGE_TITLE} - VOLODYMYR MALIUCHENKO`}
+        title={`Learn ${meta?.category} : ${PAGE_TITLE} - code-ninja0208`}
         description={PAGE_DESCRIPTION}
         openGraph={{
           type: 'article',
           article: {
             publishedTime: meta?.updated_at,
             modifiedTime: meta?.updated_at,
-            authors: ['VOLODYMYR MALIUCHENKO'],
+            authors: ['code-ninja0208'],
           },
           images: [
             {
               url: meta?.cover_url as string,
             },
           ],
-          siteName: 'VOLODYMYR MALIUCHENKO',
+          siteName: 'code-ninja0208',
         }}
       />
       <Container data-aos='fade-up' className='mb-10'>

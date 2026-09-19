@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <section className='space-y-5'>
       <div className='space-y-3'>
-        <SectionHeading title="Services" />
+        <SectionHeading title='Services' />
         <p className='leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose'>
           I help individuals, companys, institutions, and startups in creating
           exceptional digital experiences for their businesses through strategic

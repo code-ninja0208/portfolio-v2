@@ -11,7 +11,6 @@ import {
 
 import { MENU_ITEMS } from '@/common/constant/menu';
 import { CommandPaletteContext } from '@/common/context/CommandPaletteContext';
-
 import Image from '../../elements/Image';
 import ThemeToggleButton from '../../elements/ThemeToggleButton';
 import Tooltip from '../../elements/Tooltip';
@@ -20,9 +19,7 @@ import Profile from '../../sidebar/Profile';
 const HeaderTop = () => {
   const { setIsOpen } = useContext(CommandPaletteContext);
   const [showMenu, setShowMenu] = useState(false);
-
   const router = useRouter();
-
   const menus = MENU_ITEMS.filter(
     (item) => item.isShow && item.title !== 'Home',
   );
@@ -32,8 +29,8 @@ const HeaderTop = () => {
       <div className='mx-8 hidden items-center justify-between gap-5 py-8 lg:flex'>
         <div className='flex items-center gap-5'>
           <Image
-            src='/images/kingkong0208.png'
-            alt='avatar'
+            src='https://avatars.githubusercontent.com/u/181129825?v=4'
+            alt='code-ninja0208'
             width={40}
             height={40}
             rounded='rounded-full'
@@ -42,11 +39,11 @@ const HeaderTop = () => {
           {!showMenu && (
             <div className='flex items-center gap-3'>
               <Link href='/' passHref>
-                <h2 className='flex-grow  text-lg font-medium lg:text-xl'>
-                   VOLODYMYR MALIUCHENKO
+                <h2 className='flex-grow text-lg font-medium lg:text-xl'>
+                  code-ninja0208
                 </h2>
               </Link>
-              <Tooltip title='Verified'>
+              <Tooltip title='GitHub profile'>
                 <VerifiedIcon
                   size={18}
                   className='text-blue-400'
@@ -56,7 +53,6 @@ const HeaderTop = () => {
             </div>
           )}
         </div>
-
         <div className='flex items-center justify-between gap-5'>
           {showMenu && (
             <div className='flex items-center gap-6' data-aos='flip-up'>
@@ -76,7 +72,6 @@ const HeaderTop = () => {
               ))}
             </div>
           )}
-
           {!showMenu && (
             <>
               <ThemeToggleButton />
@@ -87,7 +82,6 @@ const HeaderTop = () => {
               />
             </>
           )}
-
           <button
             className='flex items-center gap-2 rounded-md border p-2 backdrop-blur dark:border-neutral-700 dark:bg-neutral-900'
             onClick={() => setShowMenu(!showMenu)}
@@ -102,5 +96,4 @@ const HeaderTop = () => {
     </header>
   );
 };
-
 export default HeaderTop;

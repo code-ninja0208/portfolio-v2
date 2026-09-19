@@ -42,7 +42,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   return (
     <>
       <NextSeo
-        title={`${blogData?.title?.rendered} - Blog VOLODYMYR MALIUCHENKO`}
+        title={`${blogData?.title?.rendered} - Blog code-ninja0208`}
         description={description}
         canonical={canonicalUrl}
         openGraph={{
@@ -50,7 +50,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
           article: {
             publishedTime: blogData?.date,
             modifiedTime: blogData?.date,
-            authors: ['VOLODYMYR MALIUCHENKO', 'shaiming'],
+            authors: ['code-ninja0208', 'shaiming'],
           },
           url: canonicalUrl,
           images: [
@@ -58,7 +58,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
               url: blogData?.featured_image_url,
             },
           ],
-          siteName: 'VOLODYMYR blog',
+          siteName: 'code-ninja0208 blog',
         }}
       />
       <Container data-aos='fade-up'>

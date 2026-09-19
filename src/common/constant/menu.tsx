@@ -2,9 +2,6 @@ import { BiRocket as ContactIcon } from 'react-icons/bi';
 import {
   BsEnvelopeAtFill as EmailIcon,
   BsGithub as GithubIcon,
-  BsTelegram  as TelegramIcon,
-  BsLinkedin as LinkedinIcon,
-  BsDiscord  as DiscordIcon,
 } from 'react-icons/bs';
 import {
   FiBookOpen as LearnIcon,
@@ -112,43 +109,12 @@ export const MENU_APPS: MenuItemProps[] = [
 export const SOCIAL_MEDIA: MenuItemProps[] = [
   {
     title: 'Email',
-    href: 'mailto:paishaiming995@gmail.com',
+    href: 'mailto:contributor0208@hotmail.com',
     icon: <EmailIcon size={iconSize} />,
     isShow: true,
     isExternal: true,
     eventName: 'Contact: Email',
     className: '!bg-green-600 border border dark:border-neutral-700',
-    type: 'Link',
-  },
-
-  {
-    title: 'Linkedin',
-    href: 'https://www.linkedin.com/in/volodymyr-ma-5aa969287/',
-    icon: <LinkedinIcon size={iconSize} />,
-    isShow: true,
-    isExternal: true,
-    eventName: 'Social: Linkedin',
-    className: '!bg-blue-500 border border dark:border-neutral-700',
-    type: 'Link',
-  },
-  {
-    title: 'Telegram',
-    href: 'http://t.me/CrazyTechLearner0208',
-    icon: <TelegramIcon size={iconSize} />,
-    isShow: true,
-    isExternal: true,
-    eventName: 'Social: Telegram',
-    className: '!bg-sky-500 border border dark:border-neutral-700',
-    type: 'Link',
-  },
-  {
-    title: 'Discord',
-    href: 'https://discordapp.com/users/jerry_dev325_93534',
-    icon: <DiscordIcon size={iconSize} />,
-    isShow: true,
-    isExternal: true,
-    eventName: 'Social: Discord',
-    className: '!bg-orange-700 border border dark:border-neutral-700',
     type: 'Link',
   },
   {

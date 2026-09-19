@@ -6,6 +6,9 @@ on:
       - main
   pull_request: {}
 
+permissions:
+  contents: write
+
 concurrency:
   group: ${{ github.job }}-${{ github.ref }}
   cancel-in-progress: true
@@ -24,7 +27,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🔬 Lint
         run: yarn lint
@@ -42,7 +45,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🔎 Type check
         run: yarn typecheck
@@ -53,6 +56,8 @@ jobs:
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
 
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
@@ -60,7 +65,22 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
+
+      - name: 💅 Format
+        run: yarn format
+
+      - name: 📤 Commit formatting fixes
+        if: github.event_name == 'pull_request'
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "style: format with prettier"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
       - name: 💅 Prettier check
         run: yarn format:check
@@ -78,7 +98,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🃏 Run jest
         run: yarn test

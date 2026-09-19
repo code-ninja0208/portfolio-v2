@@ -35,7 +35,8 @@ export const LEARN_CONTENTS: ContentProps[] = [
     id: 4,
     title: 'Rust and Solidity Integration',
     slug: 'rust-solidity',
-    description: 'Learn how to integrate Rust with Solidity for smart contracts.',
+    description:
+      'Learn how to integrate Rust with Solidity for smart contracts.',
     image: '/images/learn/rust3.jpg',
     is_new: true,
     level: 'Advanced',
