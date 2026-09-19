@@ -1,23 +1,20 @@
 export const ABOUT = `
 <p>
-    Hello! Thanks for stopping by my personal website.
+  Hello! Thanks for stopping by my personal website.
 </p>
 <p>
-    I'm Volodymyr.  I've been working in Blockchain & Web development for over 7 years, doing both the coding you see on the screen (frontend) and the stuff that happens behind the scenes (backend). But what really gets me excited is making websites and apps that are easy for everyone to use and look good too!
+  I'm <strong>code-ninja0208</strong>, a software engineer primarily focused on <strong>Data Engineering and AI-powered data systems</strong>, with additional experience in full-stack development and Web3 engineering.
 </p>
 <p>
-    I'm really into React, Next.js, Node.js, Express, Web3, which are languages used to build websites. I also have experience with other frameworks such as Django, .Net, Rocket and WordPress and Laravel. I love learning about new web tools and features. Nowadays I am studying about Rust.
+  I enjoy designing systems that collect, transform, store and expose data reliably — from ETL / ELT pipelines and data modeling to backend APIs, analytics workflows and intelligent applications.
 </p>
 <p>
-    In my career, I've took part in teams to build software for a wide range of companies, from large corporations to innovative startups.
+  My full-stack background helps me build complete products around data, while my Web3 experience includes smart contracts, blockchain APIs and on-chain / off-chain application architecture.
 </p>
 <p>
-    I believe that good communication is super important in any job.
+  My current technology focus includes Python, SQL, PostgreSQL, MySQL, MongoDB, FastAPI, Django, Node.js, React, Next.js, TypeScript, Solidity, Rust, AWS, Docker and Kubernetes.
 </p>
 <p>
-    I'm good at adapting to different situations, working efficiently, and always trying to do my best. My experience has taught me how to solve problems and lead teams, but I'm also happy to work with others to get things done. I'm excited about the chance to work together and make cool stuff!
-</p>
-<p>
-    I'm looking forward to the possibility of working with you!
+  I'm interested in building practical, observable and maintainable systems — and continuously learning across data, AI and distributed technologies.
 </p>
 `;
