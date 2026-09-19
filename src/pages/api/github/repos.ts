@@ -1,10 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+interface GithubApiRepo {
+  name: string;
+  description: string | null;
+  html_url: string;
+  homepage: string | null;
+  language: string | null;
+  stargazers_count: number;
+  forks_count: number;
+  updated_at: string;
+  fork: boolean;
+}
+
+interface GithubReposResponse {
+  repos: GithubApiRepo[];
+}
+
 const USERNAME = 'code-ninja0208';
 
 export default async function handler(
   _req: NextApiRequest,
-  res: NextApiResponse,
+  res: NextApiResponse<GithubReposResponse>,
 ) {
   try {
     const response = await fetch(
@@ -14,10 +30,10 @@ export default async function handler(
 
     if (!response.ok) return res.status(response.status).json({ repos: [] });
 
-    const repos = await response.json();
+    const repos = (await response.json()) as GithubApiRepo[];
     const data = repos
-      .filter((repo: any) => !repo.fork)
-      .map((repo: any) => ({
+      .filter((repo) => !repo.fork)
+      .map((repo) => ({
         name: repo.name,
         description: repo.description,
         html_url: repo.html_url,
