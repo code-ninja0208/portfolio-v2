@@ -1,8 +1,8 @@
+import Tooltip from '@/common/components/elements/Tooltip';
 import {
   MdOutlineFullscreen as FullScreenIcon,
   MdOutlineFullscreenExit as ExitFullScreenIcon,
 } from 'react-icons/md';
-import Tooltip from '@/common/components/elements/Tooltip';
 
 
 interface PanelFooterProps {
