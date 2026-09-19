@@ -24,7 +24,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🔬 Lint
         run: yarn lint
@@ -42,7 +42,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🔎 Type check
         run: yarn typecheck
@@ -60,7 +60,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 💅 Prettier check
         run: yarn format:check
@@ -78,7 +78,7 @@ jobs:
           node-version: 20
 
       - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+        run: yarn install --no-frozen-lockfile
 
       - name: 🃏 Run jest
         run: yarn test
