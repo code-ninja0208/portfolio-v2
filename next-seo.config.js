@@ -1,42 +1,23 @@
-const canonicalUrl = 'https://portfolio-v2-3csx.onrender.com/';
-const metaImage = 'https://i.ibb.co/DCy5BL0/thumbnail-7ec1e453-66b0-44c2-b188-e91b588ad25f.jpg';
+const canonicalUrl = process.env.SITE_URL || 'https://portfolio-v2-3csx.onrender.com/';
+const metaImage = 'https://avatars.githubusercontent.com/u/181129825?v=4';
 const metaDescription =
-  'Senior Full stack web3 Engineer';
+  'Data Engineer, AI & Data Systems, Full-Stack Engineer and Web3 Developer.';
 
 const defaultSEOConfig = {
-  defaultTitle: 'VOLODYMYR MALIUCHENKO - Personal Website',
+  defaultTitle: 'code-ninja0208 - Data Engineer | AI | Full-Stack | Web3',
   description: metaDescription,
   canonical: canonicalUrl,
   openGraph: {
     canonical: canonicalUrl,
-    title: 'VOLODYMYR MALIUCHENKO - Personal Website',
+    title: 'code-ninja0208 - Data Engineer | AI | Full-Stack | Web3',
     description: metaDescription,
     type: 'website',
     images: [
-      {
-        url: metaImage,
-        alt: 'avatar og-image',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: metaImage,
-        alt: 'avatar og-image',
-        width: 1200,
-        height: 630,
-      },
-      {
-        url: metaImage,
-        alt: 'avatar og-image',
-        width: 1600,
-        height: 900,
-      },
+      { url: metaImage, alt: 'code-ninja0208 GitHub avatar', width: 800, height: 800 },
     ],
-    site_name: 'Personal Portfolio',
+    site_name: 'code-ninja0208 Portfolio',
   },
   twitter: {
-    handle: '@handle',
-    site: '@site',
     cardType: 'summary_large_image',
   },
 };
