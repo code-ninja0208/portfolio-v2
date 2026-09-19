@@ -4,6 +4,7 @@ import {
 } from 'react-icons/md';
 import Tooltip from '@/common/components/elements/Tooltip';
 
+
 interface PanelFooterProps {
   isFullScreen?: boolean;
   onCloseFullScreen?: () => void;
