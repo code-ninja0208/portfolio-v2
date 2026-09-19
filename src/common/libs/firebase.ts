@@ -9,9 +9,12 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
 };
 
 export const getFirebaseDatabase = () => {
+  if (!firebaseConfig.databaseURL) return null;
+
   const firebase = !getApps().length
     ? initializeApp(firebaseConfig)
     : getApp();
