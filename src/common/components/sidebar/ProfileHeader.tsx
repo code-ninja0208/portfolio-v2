@@ -19,7 +19,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => (
     )}
   >
     <Image
-      src=GITHUB_AVATAR_URL
+      src={GITHUB_AVATAR_URL}
       alt='code-ninja0208'
       width={expandMenu ? 80 : imageSize}
       height={expandMenu ? 80 : imageSize}
