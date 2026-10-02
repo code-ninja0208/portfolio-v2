@@ -31,7 +31,6 @@ Create `.env.local` only for optional private integrations used by the original 
 
 Built with Next.js, TypeScript and Tailwind CSS.
 
-
 ## Engineering quality
 
 - SEO metadata uses centralized site URLs.
