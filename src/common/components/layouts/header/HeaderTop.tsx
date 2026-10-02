@@ -1,3 +1,4 @@
+import { GITHUB_AVATAR_URL } from '@/common/constant/site';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -29,7 +30,7 @@ const HeaderTop = () => {
       <div className='mx-8 hidden items-center justify-between gap-5 py-8 lg:flex'>
         <div className='flex items-center gap-5'>
           <Image
-            src='https://avatars.githubusercontent.com/u/181129825?v=4'
+            src={GITHUB_AVATAR_URL}
             alt='code-ninja0208'
             width={40}
             height={40}

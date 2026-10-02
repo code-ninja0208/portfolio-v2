@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 import BackButton from '@/common/components/elements/BackButton';
 import Container from '@/common/components/elements/Container';
+import { SITE_URL } from '@/common/constant/site';
 import { formatExcerpt } from '@/common/helpers';
 import { BlogDetailProps } from '@/common/types/blog';
 import BlogDetail from '@/modules/blog/components/BlogDetail';
@@ -16,16 +17,13 @@ const GiscusComment = dynamic(
 );
 
 interface BlogDetailPageProps {
-  blog: {
-    data: BlogDetailProps;
-  };
+  blog: { data: BlogDetailProps };
 }
 
 const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   const blogData = blog?.data || {};
-
   const slug = `blog/${blogData?.slug}?id=${blogData?.id}`;
-  const canonicalUrl = `https://portfolio-v2-3csx.onrender.com/${slug}`;
+  const canonicalUrl = `${SITE_URL}/${slug}`;
   const description = formatExcerpt(blogData?.excerpt?.rendered);
 
   const incrementViews = async () => {
@@ -33,9 +31,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   };
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      incrementViews();
-    }
+    if (process.env.NODE_ENV === 'production') incrementViews();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -53,12 +49,8 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
             authors: ['code-ninja0208', 'shaiming'],
           },
           url: canonicalUrl,
-          images: [
-            {
-              url: blogData?.featured_image_url,
-            },
-          ],
-          siteName: 'code-ninja0208 blog',
+          images: [{ url: blogData?.featured_image_url }],
+          siteName: 'code-ninja0208 Portfolio',
         }}
       />
       <Container data-aos='fade-up'>
@@ -76,30 +68,11 @@ export default BlogDetailPage;
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const blogId = context.query?.id as string;
-
-  if (!blogId) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    };
-  }
+  if (!blogId) return { redirect: { destination: '/', permanent: false } };
 
   const response = await getBlogDetail(parseInt(blogId));
-
   if (response?.status === 404) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-      },
-    };
+    return { redirect: { destination: '/404', permanent: false } };
   }
-
-  return {
-    props: {
-      blog: response,
-    },
-  };
+  return { props: { blog: response } };
 };

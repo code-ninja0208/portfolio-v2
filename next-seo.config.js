@@ -1,5 +1,5 @@
 const canonicalUrl =
-  process.env.SITE_URL || 'https://portfolio-v2-3csx.onrender.com/';
+  process.env.SITE_URL || 'https://code-ninja0208-portfolio.onrender.com/';
 const metaImage = 'https://avatars.githubusercontent.com/u/181129825?v=4';
 const metaDescription =
   'Data Engineer, AI & Data Systems, Full-Stack Engineer and Web3 Developer.';
@@ -23,9 +23,7 @@ const defaultSEOConfig = {
     ],
     site_name: 'code-ninja0208 Portfolio',
   },
-  twitter: {
-    cardType: 'summary_large_image',
-  },
+  twitter: { cardType: 'summary_large_image' },
 };
 
 export default defaultSEOConfig;

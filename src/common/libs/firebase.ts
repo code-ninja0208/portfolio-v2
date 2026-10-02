@@ -15,9 +15,7 @@ const firebaseConfig = {
 export const getFirebaseDatabase = () => {
   if (!firebaseConfig.databaseURL) return null;
 
-  const firebase = !getApps().length
-    ? initializeApp(firebaseConfig)
-    : getApp();
+  const firebase = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
   return getDatabase(firebase);
 };
