@@ -27,6 +27,17 @@ describe('mapGithubRepos', () => {
       },
     ];
 
-    expect(mapGithubRepos(repos)).toEqual([repos[0]]);
+    expect(mapGithubRepos(repos)).toEqual([
+      {
+        name: 'portfolio-v2',
+        description: 'Portfolio',
+        html_url: 'https://github.com/code-ninja0208/portfolio-v2',
+        homepage: 'https://code-ninja0208-portfolio.onrender.com',
+        language: 'TypeScript',
+        stargazers_count: 2,
+        forks_count: 1,
+        updated_at: '2026-10-02T00:00:00Z',
+      },
+    ]);
   });
 });
