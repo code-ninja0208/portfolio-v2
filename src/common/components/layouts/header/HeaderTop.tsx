@@ -30,7 +30,7 @@ const HeaderTop = () => {
       <div className='mx-8 hidden items-center justify-between gap-5 py-8 lg:flex'>
         <div className='flex items-center gap-5'>
           <Image
-            src=GITHUB_AVATAR_URL
+            src={GITHUB_AVATAR_URL}
             alt='code-ninja0208'
             width={40}
             height={40}
