@@ -1,3 +1,4 @@
+import { GITHUB_AVATAR_URL } from '@/common/constant/site';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { MdVerified as VerifiedIcon } from 'react-icons/md';
@@ -18,7 +19,7 @@ const ProfileHeader = ({ expandMenu, imageSize }: ProfileHeaderProps) => (
     )}
   >
     <Image
-      src='https://avatars.githubusercontent.com/u/181129825?v=4'
+      src=GITHUB_AVATAR_URL
       alt='code-ninja0208'
       width={expandMenu ? 80 : imageSize}
       height={expandMenu ? 80 : imageSize}
