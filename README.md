@@ -30,3 +30,10 @@ Create `.env.local` only for optional private integrations used by the original 
 - GitHub: https://github.com/code-ninja0208
 
 Built with Next.js, TypeScript and Tailwind CSS.
+
+
+## Engineering quality
+
+- SEO metadata uses centralized site URLs.
+- Shared image handling uses Next Image with a centralized quality default.
+- Reusable helpers and GitHub repository mapping have unit coverage.
