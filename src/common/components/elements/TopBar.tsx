@@ -6,7 +6,7 @@ const TopBar = () => {
       <span>🚀</span>
       <span>Just launched my landing page website. check it out :</span>
       <a
-        href='https://portfolio-v2-3csx.onrender.com/?utm_source=code-ninja0208&utm_medium=referral&ref=code-ninja0208'
+        href='https://code-ninja0208-portfolio.onrender.com/?utm_source=code-ninja0208&utm_medium=referral&ref=code-ninja0208'
         target='_blank'
         className='ml-0.5 underline'
       >
