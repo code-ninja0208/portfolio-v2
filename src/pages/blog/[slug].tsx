@@ -12,9 +12,13 @@ import { BlogDetailProps } from '@/common/types/blog';
 import BlogDetail from '@/modules/blog/components/BlogDetail';
 import { getBlogDetail } from '@/services/blog';
 
-const GiscusComment = dynamic(() => import('@/modules/blog/components/GiscusComment'));
+const GiscusComment = dynamic(
+  () => import('@/modules/blog/components/GiscusComment'),
+);
 
-interface BlogDetailPageProps { blog: { data: BlogDetailProps }; }
+interface BlogDetailPageProps {
+  blog: { data: BlogDetailProps };
+}
 
 const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
   const blogData = blog?.data || {};
@@ -52,7 +56,9 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({ blog }) => {
       <Container data-aos='fade-up'>
         <BackButton url='/blog' />
         <BlogDetail {...blogData} />
-        <section id='comments'><GiscusComment isEnableReaction={false} /></section>
+        <section id='comments'>
+          <GiscusComment isEnableReaction={false} />
+        </section>
       </Container>
     </>
   );

@@ -21,18 +21,27 @@ export interface GithubRepoResponse {
   updated_at: string;
 }
 
-export const mapGithubRepos = (
-  repos: GithubApiRepo[],
-): GithubRepoResponse[] =>
+export const mapGithubRepos = (repos: GithubApiRepo[]): GithubRepoResponse[] =>
   repos
     .filter((repo) => !repo.fork)
-    .map(({ name, description, html_url, homepage, language, stargazers_count, forks_count, updated_at }) => ({
-      name,
-      description,
-      html_url,
-      homepage,
-      language,
-      stargazers_count,
-      forks_count,
-      updated_at,
-    }));
+    .map(
+      ({
+        name,
+        description,
+        html_url,
+        homepage,
+        language,
+        stargazers_count,
+        forks_count,
+        updated_at,
+      }) => ({
+        name,
+        description,
+        html_url,
+        homepage,
+        language,
+        stargazers_count,
+        forks_count,
+        updated_at,
+      }),
+    );

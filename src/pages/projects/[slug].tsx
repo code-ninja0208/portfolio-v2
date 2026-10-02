@@ -9,7 +9,9 @@ import prisma from '@/common/libs/prisma';
 import { ProjectItemProps } from '@/common/types/projects';
 import ProjectDetail from '@/modules/projects/components/ProjectDetail';
 
-interface ProjectsDetailPageProps { project: ProjectItemProps; }
+interface ProjectsDetailPageProps {
+  project: ProjectItemProps;
+}
 
 const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
   const PAGE_TITLE = project?.title;

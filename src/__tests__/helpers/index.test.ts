@@ -13,9 +13,9 @@ describe('common helpers', () => {
   });
 
   test('formatExcerpt strips HTML and truncates at a word boundary', () => {
-    expect(formatExcerpt('<p>Hello <strong>world</strong> from Next.js</p>', 11)).toBe(
-      'Hello world...',
-    );
+    expect(
+      formatExcerpt('<p>Hello <strong>world</strong> from Next.js</p>', 11),
+    ).toBe('Hello world...');
   });
 
   test('calculateReadingTime returns minutes from readable content', () => {

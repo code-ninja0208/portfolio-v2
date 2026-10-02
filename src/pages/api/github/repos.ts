@@ -7,7 +7,9 @@ import {
   mapGithubRepos,
 } from '@/common/helpers/github';
 
-interface GithubReposResponse { repos: GithubRepoResponse[]; }
+interface GithubReposResponse {
+  repos: GithubRepoResponse[];
+}
 
 const GITHUB_REPOS_ENDPOINT = `${GITHUB_PROFILE_URL}/repos`;
 
@@ -23,7 +25,10 @@ export default async function handler(
     if (!response.ok) return res.status(response.status).json({ repos: [] });
     const repos = (await response.json()) as GithubApiRepo[];
     const data = mapGithubRepos(repos);
-    res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=3600');
+    res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=900, stale-while-revalidate=3600',
+    );
     return res.status(200).json({ repos: data });
   } catch {
     return res.status(500).json({ repos: [] });

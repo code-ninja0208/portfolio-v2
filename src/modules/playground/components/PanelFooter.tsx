@@ -4,7 +4,6 @@ import {
   MdOutlineFullscreenExit as ExitFullScreenIcon,
 } from 'react-icons/md';
 
-
 interface PanelFooterProps {
   isFullScreen?: boolean;
   onCloseFullScreen?: () => void;
