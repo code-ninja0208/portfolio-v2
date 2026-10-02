@@ -8,9 +8,9 @@ import { DEFAULT_IMAGE_QUALITY } from '@/common/constant/site';
 import cn from '@/common/libs/cn';
 
 // Shared image wrapper keeps loading behavior and quality consistent across the portfolio.
-type ImageProps = { rounded?: string } & NextImageProps;
+type PortfolioImageProps = { rounded?: string } & NextImageProps;
 
-const Image = (props: ImageProps) => {
+const Image = (props: PortfolioImageProps) => {
   const {
     alt,
     src,
