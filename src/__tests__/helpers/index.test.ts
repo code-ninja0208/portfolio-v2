@@ -19,6 +19,6 @@ describe('common helpers', () => {
   });
 
   test('calculateReadingTime returns minutes from readable content', () => {
-    expect(calculateReadingTime('one two three four five six', 3)).toBe(1);
+    expect(calculateReadingTime('one two three four five six', 3)).toBe(2);
   });
 });
