@@ -10,7 +10,14 @@ import cn from '@/common/libs/cn';
 type ImageProps = { rounded?: string } & NextImageProps;
 
 const Image = (props: ImageProps) => {
-  const { alt, src, className, rounded, quality = DEFAULT_IMAGE_QUALITY, ...rest } = props;
+  const {
+    alt,
+    src,
+    className,
+    rounded,
+    quality = DEFAULT_IMAGE_QUALITY,
+    ...rest
+  } = props;
   const [isLoading, setLoading] = useState(true);
 
   return (
