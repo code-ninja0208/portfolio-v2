@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://portfolio-v2-3csx.onrender.com/
+Host: https://code-ninja0208-portfolio.onrender.com/
 
 # Sitemaps
-Sitemap: https://portfolio-v2-3csx.onrender.com/sitemap.xml
+Sitemap: https://code-ninja0208-portfolio.onrender.com/sitemap.xml
