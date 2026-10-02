@@ -7,3 +7,5 @@ export const SITE_URL = (
 export const GITHUB_PROFILE_URL = 'https://github.com/code-ninja0208';
 export const GITHUB_AVATAR_URL =
   'https://avatars.githubusercontent.com/u/181129825?v=4';
+
+export const DEFAULT_IMAGE_QUALITY = 75;
