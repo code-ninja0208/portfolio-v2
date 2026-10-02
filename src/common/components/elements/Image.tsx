@@ -6,36 +6,24 @@ import { useState } from 'react';
 
 import cn from '@/common/libs/cn';
 
-type ImageProps = {
-  rounded?: string;
-} & NextImageProps;
+type ImageProps = { rounded?: string } & NextImageProps;
 
 const Image = (props: ImageProps) => {
-  const { alt, src, className, rounded, ...rest } = props;
+  const { alt, src, className, rounded, quality = 75, ...rest } = props;
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <div
-      className={clsx(
-        'overflow-hidden',
-        isLoading ? 'animate-pulse' : '',
-        rounded,
-      )}
-    >
+    <div className={clsx('overflow-hidden', isLoading ? 'animate-pulse' : '', rounded)}>
       <NextImage
         className={cn(
           'duration-700 ease-in-out',
-          isLoading
-            ? 'scale-[1.02] blur-xl grayscale'
-            : 'scale-100 blur-0 grayscale-0',
+          isLoading ? 'scale-[1.02] blur-xl grayscale' : 'scale-100 blur-0 grayscale-0',
           rounded,
           className,
         )}
         src={src}
         alt={alt}
-        loading='lazy'
-        // priority={true}
-        quality={100}
+        quality={quality}
         onLoadingComplete={() => setLoading(false)}
         {...rest}
       />
