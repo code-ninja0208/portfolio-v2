@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { DEFAULT_IMAGE_QUALITY } from '@/common/constant/site';
 import cn from '@/common/libs/cn';
 
-type ImageProps = { rounded?: string } & NextImageProps;
+// Shared image wrapper keeps loading behavior and quality consistent across the portfolio.\ntype ImageProps = { rounded?: string } & NextImageProps;
 
 const Image = (props: ImageProps) => {
   const {
