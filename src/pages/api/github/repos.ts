@@ -1,1 +1,31 @@
-import type { NextApiRequest, NextApiResponse } from 'next';\n\nimport { GITHUB_PROFILE_URL } from '@/common/constant/site';\nimport {\n  GithubApiRepo,\n  GithubRepoResponse,\n  mapGithubRepos,\n} from '@/common/helpers/github';\n\ninterface GithubReposResponse { repos: GithubRepoResponse[]; }\n\nconst GITHUB_REPOS_ENDPOINT = \`\${GITHUB_PROFILE_URL}/repos\`;\n\nexport default async function handler(\n  _req: NextApiRequest,\n  res: NextApiResponse<GithubReposResponse>,\n) {\n  try {\n    const response = await fetch(\n      \`\${GITHUB_REPOS_ENDPOINT}?sort=updated&direction=desc&per_page=12&type=owner\`,\n      { headers: { Accept: 'application/vnd.github+json' } },\n    );\n    if (!response.ok) return res.status(response.status).json({ repos: [] });\n    const repos = (await response.json()) as GithubApiRepo[];\n    const data = mapGithubRepos(repos);\n    res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=3600');\n    return res.status(200).json({ repos: data });\n  } catch {\n    return res.status(500).json({ repos: [] });\n  }\n}\n
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { GITHUB_PROFILE_URL } from '@/common/constant/site';
+import {
+  GithubApiRepo,
+  GithubRepoResponse,
+  mapGithubRepos,
+} from '@/common/helpers/github';
+
+interface GithubReposResponse { repos: GithubRepoResponse[]; }
+
+const GITHUB_REPOS_ENDPOINT = `${GITHUB_PROFILE_URL}/repos`;
+
+export default async function handler(
+  _req: NextApiRequest,
+  res: NextApiResponse<GithubReposResponse>,
+) {
+  try {
+    const response = await fetch(
+      `${GITHUB_REPOS_ENDPOINT}?sort=updated&direction=desc&per_page=12&type=owner`,
+      { headers: { Accept: 'application/vnd.github+json' } },
+    );
+    if (!response.ok) return res.status(response.status).json({ repos: [] });
+    const repos = (await response.json()) as GithubApiRepo[];
+    const data = mapGithubRepos(repos);
+    res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=3600');
+    return res.status(200).json({ repos: data });
+  } catch {
+    return res.status(500).json({ repos: [] });
+  }
+}
