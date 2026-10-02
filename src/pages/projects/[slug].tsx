@@ -1,1 +1,58 @@
-import { GetServerSideProps, NextPage } from 'next';\nimport { NextSeo } from 'next-seo';\n\nimport BackButton from '@/common/components/elements/BackButton';\nimport Container from '@/common/components/elements/Container';\nimport PageHeading from '@/common/components/elements/PageHeading';\nimport { SITE_URL } from '@/common/constant/site';\nimport prisma from '@/common/libs/prisma';\nimport { ProjectItemProps } from '@/common/types/projects';\nimport ProjectDetail from '@/modules/projects/components/ProjectDetail';\n\ninterface ProjectsDetailPageProps { project: ProjectItemProps; }\n\nconst ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {\n  const PAGE_TITLE = project?.title;\n  const PAGE_DESCRIPTION = project?.description;\n  const canonicalUrl = \`${SITE_URL}/projects/\${project?.slug}\`;\n\n  return (\n    <>\n      <NextSeo\n        title={\`${project?.title} - Project code-ninja0208\`}\n        description={project?.description}\n        canonical={canonicalUrl}\n        openGraph={{\n          type: 'article',\n          article: {\n            publishedTime: project?.updated_at.toString(),\n            modifiedTime: project?.updated_at.toString(),\n            authors: ['code-ninja0208'],\n          },\n          url: canonicalUrl,\n          images: [{ url: project?.image }],\n          siteName: 'code-ninja0208 Portfolio',\n        }}\n      />\n      <Container data-aos='fade-up'>\n        <BackButton url='/projects' />\n        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />\n        <ProjectDetail {...project} />\n      </Container>\n    </>\n  );\n};\n\nexport default ProjectsDetailPage;\n\nexport const getServerSideProps: GetServerSideProps = async ({ params }) => {\n  const response = await prisma.projects.findUnique({\n    where: { slug: String(params?.slug) },\n  });\n\n  if (response === null) {\n    return { redirect: { destination: '/404', permanent: false } };\n  }\n\n  return { props: { project: JSON.parse(JSON.stringify(response)) } };\n};\n
+import { GetServerSideProps, NextPage } from 'next';
+import { NextSeo } from 'next-seo';
+
+import BackButton from '@/common/components/elements/BackButton';
+import Container from '@/common/components/elements/Container';
+import PageHeading from '@/common/components/elements/PageHeading';
+import { SITE_URL } from '@/common/constant/site';
+import prisma from '@/common/libs/prisma';
+import { ProjectItemProps } from '@/common/types/projects';
+import ProjectDetail from '@/modules/projects/components/ProjectDetail';
+
+interface ProjectsDetailPageProps { project: ProjectItemProps; }
+
+const ProjectsDetailPage: NextPage<ProjectsDetailPageProps> = ({ project }) => {
+  const PAGE_TITLE = project?.title;
+  const PAGE_DESCRIPTION = project?.description;
+  const canonicalUrl = `${SITE_URL}/projects/${project?.slug}`;
+
+  return (
+    <>
+      <NextSeo
+        title={`${project?.title} - Project code-ninja0208`}
+        description={project?.description}
+        canonical={canonicalUrl}
+        openGraph={{
+          type: 'article',
+          article: {
+            publishedTime: project?.updated_at.toString(),
+            modifiedTime: project?.updated_at.toString(),
+            authors: ['code-ninja0208'],
+          },
+          url: canonicalUrl,
+          images: [{ url: project?.image }],
+          siteName: 'code-ninja0208 Portfolio',
+        }}
+      />
+      <Container data-aos='fade-up'>
+        <BackButton url='/projects' />
+        <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+        <ProjectDetail {...project} />
+      </Container>
+    </>
+  );
+};
+
+export default ProjectsDetailPage;
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const response = await prisma.projects.findUnique({
+    where: { slug: String(params?.slug) },
+  });
+
+  if (response === null) {
+    return { redirect: { destination: '/404', permanent: false } };
+  }
+
+  return { props: { project: JSON.parse(JSON.stringify(response)) } };
+};
