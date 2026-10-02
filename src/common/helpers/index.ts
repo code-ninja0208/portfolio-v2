@@ -60,9 +60,9 @@ export const removeHtmlTags = (html: string) => {
   if (typeof DOMParser !== 'undefined') {
     const doc = new DOMParser().parseFromString(html, 'text/html');
     return doc.body.textContent || '';
-  } else {
-    return html;
   }
+
+  return html.replace(/<[^>]*>/g, '');
 };
 
 export const formatExcerpt = (content: string, maxLength = 100) => {
